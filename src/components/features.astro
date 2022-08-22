@@ -2,62 +2,101 @@
 import ContentSection from "~/components/content-section.astro";
 import { Icon } from "astro-icon";
 
-const features = [
+const drinks = ["Mint Mojito", "Watermelon Lemon Spritzer", "Margarita"]
+
+const cocktailHour = ["Mini Crab Cakes with Spicy Mayo", "Grilled Chicken Skewer with Garlic Chili Dipping", "Meatballs in Spicy Tomato Sauce", "Burrata Cheese, Baby Arugula, Pickled Red Onions, Fig Glaze (VEG)", "Mini BBQ Pulled Pork Tacos, Pickled Red Onion, Tequila Lime Creama"]
+
+const cocktailStations = [
   {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "mdi:handshake",
+    title: "Mediterranean Tapas Bar",
+    description: "Roasted peppers, Feta Cheese, Artichoke Hearts, Olive Hummus, Garlic Hummus, Israeli Salad, Tabbouleh Salad, Pickled Red Onions, Assorted Olives, Bleu Cheese Stuffed Olives and Fresh Pita"
   },
   {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "mdi:feather",
+    title: "Italian Station",
+    description: "Chicken, Shrimp, Broccoli Rabe — Vodka Sauce, Francaise Sauce, Marinara Sauce — Cheese Ravioli Pasta, Linguine Pasta,Cavatelli Pasta"
+  }
+  
+]
+
+const dinnerMenu = [
+  {
+    title: "Plated duet salad",
+    description: "Hearts Of Romaine Salad and Caprese Salad"
   },
   {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
-    icon: "mdi:directions-fork",
+    title: "Pan Seared Almond Encrusted Chicken",
+    description: "Baby Arugula & Fresh Tomato, Almond Cream Sauce Bistro Sliced Steak with Garlic and Lemon Basil Pan Sauce (MR) Crispy Salmon with Dill Lemon Sauce"
   },
   {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
-    icon: "mdi:graph",
+    title: "Bistro Sliced Steak",
+    description: "Garlic and Lemon Basil Pan Sauce (MR)"
   },
   {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.",
-    icon: "mdi:search-web",
+    title: "Crispy Salmon",
+    description: "Dill Lemon Sauce"
   },
+]
+
+const sides = ["Oven Roasted Garlic, Eggplant, Yellow Squash, Zucchini", "Garlic Mashed Potatoes"]
+
+const dessert = [
   {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "mdi:account-group",
-  },
-];
+    title: "Cannoli Station",
+    description: "Assorted Cannoli Creams (Chocolate and Orange-Ricotta Cream)Toppings- M&M, Rainbow Sprinkles, Reese’s Pieces, Crushed Pistachio, Semi-Sweet Chocolate Chips, Royal Icing, Chocolate sauce"
+  }
+]
+
 ---
 
 <ContentSection title="Features" id="features">
-  <Fragment slot="lead">
-    Astro comes <span class="text-primary">batteries included</span>. It takes
-    the best parts of
-    <span class="text-primary">state-of-the-art</span>
-    tools and adds its own <span class="text-primary">innovations</span>.
-  </Fragment>
+  <h2>Signature cocktails</h2>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {
-      features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
-          <div class="w-16 h-16 p-3 border-2 border-current rounded-full">
-            <Icon name={icon} />
-          </div>
-          <p class="text-xl font-extrabold text-center">{title}</p>
-          <p class="text-sm text-center text-offset">{description}</p>
+      drinks.map((title) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
+          <p class="text-xl font-extrabold">{title}</p>
+        </li>
+      ))
+    }
+  </ul>
+  <h2>Cocktail hour</h2>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      cocktailHour.map((title) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
+          <p class="text-lg font-semibold">{title}</p>
+        </li>
+      ))
+    }
+  </ul>
+  <h2>Cocktail hour stations</h2>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2">
+    {
+      cocktailStations.map(({ title, description }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
+          <p class="text-xl font-extrabold">{title}</p>
+          <p class="text-sm text-offset">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+  <h2>Dinner</h2>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2">
+    {
+      dinnerMenu.map(({ title, description }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
+          <p class="text-xl font-extrabold">{title}</p>
+          <p class="text-sm text-offset">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+  <h2>Sides</h2>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2">
+    {
+      sides.map((title) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
+          <p class="text-xl font-extrabold">{title}</p>
         </li>
       ))
     }

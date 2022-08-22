@@ -1,7 +1,5 @@
 ---
 import { generateImage } from "astro-eleventy-img";
-import { Icon } from "astro-icon";
-import Starfield from "~/components/starfield.astro";
 import HeroImage from "~/components/hero-image.astro";
 
 const widths = [450, 800];
@@ -19,8 +17,7 @@ const webpSrcset = webp.map(({ srcset }) => srcset).join(",");
 const pngSrcset = png.map(({ srcset }) => srcset).join(",");
 ---
 
-<section class="relative h-full bg-black">
-  <Starfield />
+<section class="relative h-full bg-amber-50">
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
@@ -28,13 +25,11 @@ const pngSrcset = png.map(({ srcset }) => srcset).join(",");
     <h2
       class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
       <div
         class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        Frank &amp;
+        <br /> Kseniya
       </div>
     </h2>
     <picture
