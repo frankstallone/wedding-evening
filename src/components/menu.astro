@@ -53,7 +53,7 @@ const dessert = [
   <ul>
     {
       drinks.map((title) => (
-        <li class="flex flex-row py-1 lowercase">
+        <li class="flex flex-row lowercase">
           <p class="text-sm italic">{title}</p>
         </li>
       ))
@@ -63,7 +63,7 @@ const dessert = [
   <ul>
     {
       cocktailHour.map((title) => (
-        <li class="flex bg-offset py-1 lowercase">
+        <li class="flex bg-offset lowercase">
           <p class="text-sm italic">{title}</p>
         </li>
       ))
@@ -73,8 +73,8 @@ const dessert = [
   <ul class="max-w-md">
     {
       cocktailStations.map(({ title, description }) => (
-        <li class="flex flex-col bg-offset py-1 lowercase">
-          <p class="text-lg font-bold pb-2">{title}</p>
+        <li class="flex flex-col bg-offset py-2 lowercase">
+          <p class="text-lg font-bold pb-1">{title}</p>
           <p class="text-sm text-offset italic">{description}</p>
         </li>
       ))
@@ -84,8 +84,8 @@ const dessert = [
   <ul class="max-w-md">
     {
       dinnerMenu.map(({ title, description }) => (
-        <li class="flex flex-col bg-offset py-1 lowercase">
-          <p class="text-lg font-bold pb-2">{title}</p>
+        <li class="flex flex-col bg-offset py-2 lowercase">
+          <p class="text-lg font-bold pb-1">{title}</p>
           <p class="text-sm text-offset italic">{description}</p>
         </li>
       ))
@@ -105,8 +105,8 @@ const dessert = [
   <ul class="max-w-md">
     {
       dessert.map(({ title, description }) => (
-        <li class="flex flex-col bg-offset py-1 lowercase">
-          <p class="text-lg font-bold pb-2">{title}</p>
+        <li class="flex flex-col bg-offset py-2 lowercase">
+          <p class="text-lg font-bold pb-1">{title}</p>
           <p class="text-sm text-offset italic">{description}</p>
         </li>
       ))
