@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Noto Sans JP', ...defaultTheme.fontFamily.sans],
+        serif: ['Great Vibes', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         primary: "var(--color-primary)",

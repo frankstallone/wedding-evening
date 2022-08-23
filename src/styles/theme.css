@@ -1,9 +1,9 @@
 :root {
-  --color-primary: theme("colors.pink.500");
-  --color-secondary: theme("colors.indigo.500");
-  --color-text: theme("colors.gray.900");
-  --color-text-offset: theme("colors.gray.600");
-  --color-background: theme("colors.gray.50");
-  --color-background-offset: theme("colors.gray.50");
+  --color-primary: theme("colors.zinc.500");
+  --color-secondary: theme("colors.rose.800");
+  --color-text: theme("colors.zinc.900");
+  --color-text-offset: theme("colors.zinc.600");
+  --color-background: theme("colors.zinc.50");
+  --color-background-offset: theme("colors.zinc.50");
   --color-border: rgb(17 24 39/0.1); /* gray.900 */
 }
