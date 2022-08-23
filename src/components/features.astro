@@ -20,7 +20,7 @@ const cocktailStations = [
 
 const dinnerMenu = [
   {
-    title: "Plated duet salad",
+    title: "Duet salad",
     description: "Hearts Of Romaine Salad and Caprese Salad"
   },
   {
@@ -37,66 +37,77 @@ const dinnerMenu = [
   },
 ]
 
-const sides = ["Oven Roasted Garlic, Eggplant, Yellow Squash, Zucchini", "Garlic Mashed Potatoes"]
+const sides = ["Oven Roasted Garlic, Eggplant, Yellow Squash, Zucchini, and Garlic Mashed Potatoes"]
 
 const dessert = [
   {
     title: "Cannoli Station",
-    description: "Assorted Cannoli Creams (Chocolate and Orange-Ricotta Cream)Toppings- M&M, Rainbow Sprinkles, Reese’s Pieces, Crushed Pistachio, Semi-Sweet Chocolate Chips, Royal Icing, Chocolate sauce"
+    description: "Assorted Cannoli Creams (Chocolate and Orange-Ricotta Cream)Toppings- M&M, Rainbow Sprinkles, Reese\’s Pieces, Crushed Pistachio, Semi-Sweet Chocolate Chips, Royal Icing, and Chocolate sauce"
   }
 ]
 
 ---
 
-<ContentSection title="Features" id="features">
-  <h2>Signature cocktails</h2>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+<ContentSection title="Menu" id="features">
+  <h2 class="text-xl font-bold text-amber-800">Signature cocktails</h2>
+  <ul>
     {
       drinks.map((title) => (
-        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
-          <p class="text-xl font-extrabold">{title}</p>
+        <li class="flex flex-row py-1 lowercase">
+          <p class="text-sm italic">{title}</p>
         </li>
       ))
     }
   </ul>
-  <h2>Cocktail hour</h2>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <h2 class="text-xl font-bold text-amber-800">Cocktail hour</h2>
+  <ul>
     {
       cocktailHour.map((title) => (
-        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
-          <p class="text-lg font-semibold">{title}</p>
+        <li class="flex bg-offset py-1 lowercase">
+          <p class="text-sm italic">{title}</p>
         </li>
       ))
     }
   </ul>
-  <h2>Cocktail hour stations</h2>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2">
+  <h2 class="text-xl font-bold text-amber-800">Cocktail hour stations</h2>
+  <ul class="max-w-md">
     {
       cocktailStations.map(({ title, description }) => (
-        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
-          <p class="text-xl font-extrabold">{title}</p>
-          <p class="text-sm text-offset">{description}</p>
+        <li class="flex flex-col bg-offset py-1 lowercase">
+          <p class="text-lg font-bold pb-2">{title}</p>
+          <p class="text-sm text-offset italic">{description}</p>
         </li>
       ))
     }
   </ul>
-  <h2>Dinner</h2>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2">
+  <h2 class="text-xl font-bold text-amber-800">Dinner</h2>
+  <ul class="max-w-md">
     {
       dinnerMenu.map(({ title, description }) => (
-        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
-          <p class="text-xl font-extrabold">{title}</p>
-          <p class="text-sm text-offset">{description}</p>
+        <li class="flex flex-col bg-offset py-1 lowercase">
+          <p class="text-lg font-bold pb-2">{title}</p>
+          <p class="text-sm text-offset italic">{description}</p>
         </li>
       ))
     }
   </ul>
-  <h2>Sides</h2>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2">
+  <h2 class="text-xl font-bold text-amber-800">Sides</h2>
+  <ul class="max-w-md">
     {
       sides.map((title) => (
-        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset lowercase">
-          <p class="text-xl font-extrabold">{title}</p>
+        <li class="flex flex-col bg-offset lowercase">
+          <p class="text-sm text-offset italic">{title}</p>
+          </li>
+          ))
+        }
+  </ul>
+  <h2 class="text-xl font-bold text-amber-800">Dessert</h2>
+  <ul class="max-w-md">
+    {
+      dessert.map(({ title, description }) => (
+        <li class="flex flex-col bg-offset py-1 lowercase">
+          <p class="text-lg font-bold pb-2">{title}</p>
+          <p class="text-sm text-offset italic">{description}</p>
         </li>
       ))
     }
